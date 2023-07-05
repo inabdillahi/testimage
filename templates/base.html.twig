@@ -1,16 +1,150 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/icofont.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/venobox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/slick.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/nice-select.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/index.css')}}">
+
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block javascripts %}
+    {% endblock %}
+</head>
+
+<body>
+
+    <!---------L'entete ------------>
+    <header class="header-part">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-media-group">
+                    <button class="header-user"><img src="{{asset('images/user.png')}}" alt="user"></button>
+                    <a href="index.html"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
+                    <button class="header-src"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="index.html" class="header-logo">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+                <a href="login.html" class="header-widget" title="My Account">
+                    <img src="{{asset('images/user.png')}}" alt="user"><span>join</span>
+                </a>
+
+                <form class="header-form">
+                    <input type="text" placeholder="rechercher un produit...">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+
+                <div class="header-widget-group">
+                    <a href="compare.html" class="header-widget" title="Compare List">
+                        <i class="fas fa-random"></i><sup>0</sup>
+                    </a>
+                    <a href="wishlist.html" class="header-widget" title="Wishlist">
+                        <i class="fas fa-heart"></i><sup>0</sup>
+                    </a>
+                    <button class="header-widget header-cart" title="Cartlist">
+                        <i class="fas fa-shopping-basket"></i><sup>9+</sup>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--------- Menu en haut ------------>
+    <nav class="navbar-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="navbar-content">
+                        <ul class="navbar-list">
+                            <li class="navbar-item"><a class="navbar-link" href="#">Page d'accueil</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#">Nos Produits</a></li>
+
+                            <li class="navbar-item dropdown"><a class="navbar-link" href="#">Categories
+                                    <i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="dropdown-position-list">
+                                    <li><a href="faq.html">faqs</a></li>
+                                    <li><a href="offer.html">offers</a></li>
+                                    <li><a href="profile.html">my profile</a></li>
+                                    <li><a href="wallet.html">my wallet</a></li>
+                                    <li><a href="about.html">about us</a></li>
+                                    <li><a href="contact.html">contact us</a></li>
+                                    <li><a href="privacy.html">privacy policy</a></li>
+                                    <li><a href="coming-soon.html">coming soon</a></li>
+                                    <li><a href="blank-page.html">blank page</a></li>
+                                    <li><a href="error.html">404 Error</a></li>
+                                    <li><a href="email-template.html">email template</a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar-item"><a class="navbar-link" href="#">A propos de nous</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="#">Contacter-nous</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <aside class="category-sidebar">
+        <div class="category-header">
+            <h4 class="category-title"><i class="fas fa-align-left"></i><span>categories</span></h4><button
+                class="category-close"><i class="icofont-close"></i></button>
+        </div>
+        <ul class="category-list">
+            <li>hhghhh</li>
+        </ul>
+
+    </aside>
+    <!---------Menu en bas pour le mobile ------------>
+
+    <div class="mobile-menu">
+        <a href="index.html" title="Home Page">
+            <i class="fas fa-home"></i><span>Home</span>
+        </a>
+        <button class="cate-btn" title="Category List">
+            <i class="fas fa-list"></i><span>category</span>
+        </button>
+        <button class="cart-btn" title="Cartlist">
+            <i class="fas fa-shopping-basket"></i><span>cartlist</span><sup>9+</sup>
+        </button>
+        <a href="wishlist.html" title="Wishlist">
+            <i class="fas fa-heart"></i><span>wishlist</span><sup>0</sup>
+        </a>
+        <a href="compare.html" title="Compare List">
+            <i class="fas fa-random"></i><span>compare</span><sup>0</sup>
+        </a>
+    </div>
+
+    {% block body %}{% endblock %}
+
+    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/countdown.min.js') }}"></script>
+    <script src="{{ asset('assets/js/nice-select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/venobox.min.js') }}"></script>
+    <script src="{{ asset('assets/js/nice-select.js') }}"></script>
+    <script src="{{ asset('assets/js/countdown.js') }}"></script>
+    <script src="{{ asset('assets/js/accordion.js') }}"></script>
+    <script src="{{ asset('assets/js/venobox.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://kit.fontawesome.com/0c4c2b9540.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
